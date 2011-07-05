@@ -10,12 +10,12 @@
     
 	var PATH = "src/";
     var SCRIPTS = [
-	  "SVGPan.Core.js",
-	  "SVGPan.Config.js",
-	  "SVGPan.Spring.js",
-	  "SVGPan.Utils.js",
-	  "SVGPan.Viewer.js",
-	  "SVGPan.AutoAttach.js",
+		"svgpan.core.js",
+		"svgpan.config.js",
+		"svgpan.spring.js",
+		"svgpan.utils.js",
+		"svgpan.viewer.js",
+		"svgpan.autoattach.js",
     ];
     
     for (var i = 0; i < SCRIPTS.length; i++) {
