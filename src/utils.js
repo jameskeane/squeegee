@@ -1,11 +1,10 @@
-var SVGPanUtils = function() {
-    
+// Squeegee.Utils is a static class, so make it singleton instance
+Squeegee.Utils = new (function() {
     // Fields
     var self = this;
 	
     // Constructor
-    (function() {
-    })();
+    (function() {})();
     
     // Methods
     this.getElement = function(elmt) {
@@ -81,7 +80,6 @@ var SVGPanUtils = function() {
         
         // technique from:
         // http://blog.paranoidferret.com/index.php/2007/08/10/javascript-working-with-events/
-        
         if (elmt.addEventListener) {
             if (eventName == "mousewheel") {
                 elmt.addEventListener("DOMMouseScroll", handler, useCapture);
@@ -104,7 +102,6 @@ var SVGPanUtils = function() {
         
         // technique from:
         // http://blog.paranoidferret.com/index.php/2007/08/10/javascript-working-with-events/
-        
         if (elmt.removeEventListener) {
             if (eventName == "mousewheel") {
                 elmt.removeEventListener("DOMMouseScroll", handler, useCapture);
@@ -127,7 +124,6 @@ var SVGPanUtils = function() {
         
         // technique from:
         // http://blog.paranoidferret.com/index.php/2007/08/10/javascript-working-with-events/
-        
         if (event.preventDefault) {
             event.preventDefault();     // W3C for preventing default
         }
@@ -141,14 +137,10 @@ var SVGPanUtils = function() {
         
         // technique from:
         // http://blog.paranoidferret.com/index.php/2007/08/10/javascript-working-with-events/
-        
         if (event.stopPropagation) {
             event.stopPropagation();    // W3C for stopping propagation
         }
         
         event.cancelBubble = true;      // IE for stopping propagation
     };
-};
-
-// Seadragon.Utils is a static class, so make it singleton instance
-SVGPanUtils = SVGPan.Utils = new SVGPanUtils();
+});

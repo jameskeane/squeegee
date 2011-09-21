@@ -8,23 +8,23 @@ if __name__ != "__main__":
 
 HEADER = '''
 /*!
- * svgpan 0.9 (custom build from source)
+ * squeegee 1.0 - http://jameskeane.github.com/squeege
  */
 '''
 
 SRC_PATH = path.join(path.dirname(sys.argv[0]), "..", "src")
 SRC_FILES = [
     "_intro.txt",
-    "svgpan.core.js",
-    "svgpan.config.js",
-    "svgpan.spring.js",
-    "svgpan.utils.js",
-    "svgpan.viewer.js",
-    "svgpan.autoattach.js",
+    "core.js",
+    "config.js",
+    "spring.js",
+    "utils.js",
+    "viewer.js",
+    "autoattach.js",
     "_outro.txt"
 ]
 
-MIN_PATH = "svgpan.js"
+MIN_PATH = "squeegee.js"
 
 def readfile(path):
     file = open(path, 'r')

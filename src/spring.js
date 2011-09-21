@@ -1,10 +1,8 @@
 //  This code is distributed under the included license agreement, also
-//  available here: http://go.microsoft.com/fwlink/?LinkId=164943
+//  available here: http://go.microsoft.com/fwlink/?LinkId=164943 ?
+Squeegee.Spring = function(initialValue) {
 
-var SVGPanSpring = SVGPan.Spring = function(initialValue) {
-    
     // Fields
-    
     var currentValue = typeof(initialValue) == "number" ? initialValue : 0;
     var startValue = currentValue;
     var targetValue = currentValue;
@@ -19,7 +17,7 @@ var SVGPanSpring = SVGPan.Spring = function(initialValue) {
      * Transform from linear [0,1] to spring [0,1].
      */
     function transform(x) {
-        var s = SVGPanConfig.springStiffness;
+        var s = Squeegee.Config.springStiffness;
         return (1.0 - Math.exp(-x * s)) / (1.0 - Math.exp(-s));
     }
     
@@ -45,7 +43,7 @@ var SVGPanSpring = SVGPan.Spring = function(initialValue) {
         startValue = currentValue;
         startTime = currentTime;
         targetValue = target;
-        targetTime = startTime + 1000 * SVGPanConfig.animationTime;
+        targetTime = startTime + 1000 * Squeegee.Config.animationTime;
     };
     
     this.shiftBy = function(delta) {

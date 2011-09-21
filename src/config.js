@@ -1,11 +1,9 @@
-var SVGPanConfig = SVGPan.Config;
-
 (function() {
-    if (SVGPanConfig) {
+    if (Squeegee.Config) {
         return;
     }
 
-    SVGPanConfig = SVGPan.Config = {
+    Squeegee.Config = {
 		debugMode: false,
 		
         animationTime: 1.5,
@@ -17,5 +15,4 @@ var SVGPanConfig = SVGPan.Config;
         zoomPerScroll: Math.pow(2, 1/3),
         zoomPerSecond: 2.0
     };
-
 })();

@@ -1,5 +1,5 @@
 func = function() {
-	(new SVGPan.Viewer(SVGPanUtils.getElement('viewport')));
+	(new Squeegee.Viewer(Squeegee.Utils.getElement('viewport')));
 };
 
 if (window.addEventListener) 
