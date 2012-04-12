@@ -24,7 +24,7 @@ SRC_FILES = [
     "_outro.txt"
 ]
 
-MIN_PATH = "squeegee.js"
+MIN_PATH = "squeegee-min.js"
 
 def readfile(path):
     file = open(path, 'r')
